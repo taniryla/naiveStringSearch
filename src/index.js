@@ -1,4 +1,5 @@
 function naiveStringSearch(long, short) {
+  let counter = 0;
   let longArr = [];
   let longChar = long.split("");
   longArr.push(longChar);
@@ -7,7 +8,13 @@ function naiveStringSearch(long, short) {
   shortArr.push(shortChar);
   for (let i = 0; i < longArr.length; i++) {
     for (let j = 0; i < shortArr.length; j++) {
-      if (longArr[i] !== shortArr[j]) return;
+      if (longArr[i] !== shortArr[j]) {
+        return;
+      } else {
+        if (longArr[i] === shortArr[0]) {
+          j++;
+        }
+      }
     }
   }
 }
