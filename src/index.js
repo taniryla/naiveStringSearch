@@ -1,19 +1,16 @@
 function naiveStringSearch(long, short) {
-  let counter = 0;
-  let longArr = [];
-  let longChar = long.split("");
-  longArr.push(longChar);
-  let shortArr = [];
-  let shortChar = short.split("");
+  let count = 0;
+
   shortArr.push(shortChar);
-  for (let i = 0; i < longArr.length; i++) {
-    for (let j = 0; i < shortArr.length; j++) {
-      if (longArr[i] !== shortArr[j]) {
-        return;
-      } else {
-        counter++;
+  for (let i = 0; i < long.length; i++) {
+    for (let j = 0; i < short.length; j++) {
+      if (short[j] !== long[i + j]) {
+        break;
+      }
+      if (j === short.length - 1) {
+        count++;
       }
     }
   }
-  return counter;
+  return count;
 }
