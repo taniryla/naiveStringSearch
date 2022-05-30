@@ -12,8 +12,8 @@ function naiveStringSearch(long, short) {
         return;
       } else {
         counter++;
-        }
       }
     }
   }
+  return counter;
 }
