@@ -1,0 +1,2 @@
+# naiveStringSearch
+Created with CodeSandbox
