@@ -11,8 +11,7 @@ function naiveStringSearch(long, short) {
       if (longArr[i] !== shortArr[j]) {
         return;
       } else {
-        if (longArr[i] === shortArr[0]) {
-          j++;
+        counter++;
         }
       }
     }
